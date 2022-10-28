@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../../img/works_keybord.png">
+    <meta name="description" content="vueの練習（タイピングゲーム）">
+    <meta name="keywords" content="タイピング,vue">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.prod.js"></script>
+    <title>タイピングゲーム</title>
+</head>
+<body>
+    <div id="app">
+        <!-- プレイ中画面 -->
+        <div v-if="disp==='playing'" class="playDisp wrap" ref="playDisp">
+            <div class="timer">
+                <p>{{limit}}</p>
+            </div>
+            <div class="img">
+                <img src="./img/figure_hand_maru.png" alt="正解" v-if="isCorrect">
+                <img src="./img/figure_hand_batsu.png" alt="不正解" v-else>
+            </div>
+            <div class="contents">
+                <div class="question">
+                    <h2>第{{tgtWordNum}}問</h2>
+                    <p>{{tgtWord}}</p>
+                </div>
+                <div class="answer">
+                    <p>{{typingWord}}</p>
+                    <input type="text" v-model.trim="typingWord" ref="inputText" maxlength="18">
+                </div>
+                <div class="btn">
+                    <button @click="start">最初からやり直し</button>
+                </div>
+            </div>
+        </div>
+        <!-- プレイ中以外の画面 -->
+        <div v-else class="defaultDisp wrap">
+            <template v-for="d in displays">
+                <div class="contents" v-if="disp===d.dispName">
+                    <h2>{{d.title}}</h2>
+                    <div class="btn">
+                        <button @click="start">{{d.btnVal}}</button>
+                    </div>
+                    <div class="img">
+                        <img v-bind:src="d.path" alt="ポーズ">
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+

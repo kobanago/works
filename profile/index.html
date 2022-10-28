@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="./img/linkicon.png">
+    <meta name="description" content="面接するにあたっての事前の自己紹介">
+    <meta name="keywords" content="自己紹介,経歴,WEB制作">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width:788px)">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <title>Profile</title>
+  </head>
+  <body class="top">
+    <header>
+      <h1 class="sitettl"><a href="#">Profile</a></h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#first">まず初めに</a></li>
+          <li><a href="#about">自己紹介</a></li>
+          <li><a href="#works">制作物</a></li>
+          <li><a href="./career_dtl.html">経歴詳細へ <img src="./img/right.png" alt="次のページ"></a></li>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+      <div class="mainimg">
+        <img src="./img/mainimg.jpg" alt="mountain">
+      </div>
+      <section id="first">
+        <h2 class="secttl">まず初めに</h2>
+        <div class="contents-wrap">
+          <section id="reason" class="item">
+            <h3>サイト設立理由</h3>
+            <div class="list">
+              <div>
+               <h4>ページ作成練習</h4>
+               <img src="./img/reason1.png" alt="練習">
+               <p>HPの0からの作成経験がなかったため、挑戦してみました。</p> 
+              </div>
+              <div>
+                <h4>キャリア整理</h4>
+                <img src="./img/reason2.png" alt="整理">
+                <p>改めて自分のキャリアを棚卸して、自分はどうなりたいのか改めて確認しました。</p> 
+              </div>
+              <div>
+                <h4>自己紹介時間削減</h4>
+               <img src="./img/reason3.png" alt="時間削減">
+               <p>限られた時間内で全てを伝えきることは難しいので、事前情報としてお伝えできればと思い作成しました。</p> 
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2 class="secttl">自己紹介</h2>
+        <div class="contents-wrap">
+          <section id="profile" class="item">
+            <h3>自己紹介</h3>
+            <table>
+              <tbody>
+                <tr><th>名前</th><td>小林</td></tr>
+                <tr><th>年齢</th><td>20代後半</td></tr>
+                <tr><th>就業状況</th><td>離職中</td></tr>
+                <tr><th rowspan="5">保有資格</th><td>HTML5プロフェッショナル認定試験 レベル2</td></tr>
+                <tr><td>Oracle Certified Java Programmer, Silver SE 11</td></tr>
+                <tr><td>Lpic level1</td></tr>
+                <tr><td>簿記3級</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="career" class="item">
+            <h3>経歴概要</h3>
+            <ol>
+              <li><span>食品業界大手メーカー</span>×<span>営業</span></li>
+              <li><span>IT業界SESベンチャー</span>×<span>事務、総務、人事、<br>エンジニア<br>(フロントエンドテスター兼開発)</span></li>
+              <li><span>IT業界SES大手</span>×<span>エンジニア<br>(運用保守、シナリオテスター)</span></li>
+            </ol>
+            <div class="readmore"><a href="./career_dtl.html">Read more</a></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="works">
+        <h2 class="secttl">制作物</h2>
+        <div class="contents-wrap">
+          <section id="typing" class="item">
+            <a class="link" target="_blank" href="./works/01/index.html">
+              <h3>タイピングゲーム</h3>
+              <img src="./img/works_keybord.png" alt="キーボード">
+            </a>
+             <dl>
+              <dt>概要</dt>
+              <dd>10問出題のタイピングゲームです。(※デスクトップ専用)</dd>
+              <dt>制作意図</dt>
+              <dd>Vue.jsのディレクティブの理解を深めるため制作しました。<br>
+              まだ学習を始めたばかりなので、まずはディレクティブ、次はコンポーネントという段階で制作物を作れればと思います。</dd>
+             </dl>
+          </section>
+        </div>
+      </section>
+
+    </main>
+    <footer>
+      <p><small>&copy; Profile</small></p>
+    </footer>
+  </body>
+</html>
